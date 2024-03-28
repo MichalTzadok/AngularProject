@@ -1,0 +1,102 @@
+<!-- <header>
+    <div>
+      <h1 >Find Your Job Easily</h1>
+      <div *ngIf="isUser">
+        <p>Hi {{ userName }}</p>
+         <p>num of CV sent: {{ numOfCVs }}</p>
+         <div *ngIf="!showen">
+         <button   (click)="showJobs()">To the full jobs list👇</button>
+        </div>
+      </div>
+      <div *ngIf="!isUser && !redirectToLoginClicked">
+        <button (click)="login()">Login</button>      </div>
+    </div>
+    <div >
+      <a routerLink="/login" (click)="redirectToLogin()"  >
+          <img src="assets/Logo.png" alt="Logo application" width="200" height="140">
+        </a>
+      </div>
+  </header>
+  
+  <footer>
+    <div >
+      <p>פרטי יצירת קשר עם מנהל האתר:</p>
+      <p>Email: admin&#64;example.com</p>
+      <p>טלפון: 123-456789</p>
+    </div>
+  </footer> -->
+<!-- 
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container" >
+      <div>
+        <h1 class="text-center">Welcome to Our Job Search Website</h1>
+        <p class="text-center">Find Your Perfect Job Easily!</p>
+        <p class="text-center">Here you can enjoy a wide variety of jobs for all ages and in all fields.</p>
+        <div *ngIf="isUser">
+          <p class="text-center">Hi {{ userName }}</p>
+           <p class="text-center"> Num of CV sent: {{ numOfCVs }}</p>
+           <div *ngIf="!showen">
+           <button   (click)="showJobs()">To the full jobs list👇</button>
+          </div>
+        </div>
+        <div *ngIf="!isUser && !redirectToLoginClicked">
+          <button (click)="login()">Login</button>      </div>
+      </div>
+      <div >
+        <a routerLink="/login" (click)="redirectToLogin()"  >
+            <img src="assets/Logo.png" alt="Logo application" width="350" height="230">
+          </a>
+        </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light footer">
+    <div >
+      <p>פרטי יצירת קשר עם מנהל האתר:</p>
+      <p>Email: admin&#64;example.com</p>
+      <p>טלפון: 123-456789</p>
+    </div>
+      </nav>
+   -->
+
+
+
+
+   <!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <div>
+      <h1 class="text-center">Welcome to Our Job Search Website</h1>
+      <p class="text-center">Find Your Perfect Job Easily!</p>
+      <p class="text-center">Here you can enjoy a wide variety of jobs for all ages and in all fields.</p>
+      <div *ngIf="isUser">
+        <p class="text-center"><strong>Hi {{ userName }}</strong></p>
+        <p class="text-center"><strong>Num of CV sent: {{ numOfCVs }}</strong></p>
+        <div *ngIf="!showen" class="text-center">
+          <button class="btn btn-dark" (click)="showJobs()">To the full jobs list👇</button>
+        </div>
+      </div>
+      <div   *ngIf="!isUser && !redirectToLoginClicked" class="text-center">
+        <button   class="btn btn-dark" (click)="login()">Login</button>
+      </div>
+    </div>
+    <div>
+      <a routerLink="/login" (click)="redirectToLogin()" class="d-block text-center">
+        <img src="assets/Logo.png" alt="Logo application" width="350" height="230">
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Footer -->
+<footer class="footer navbar-light bg-light fixed-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h3><strong> details for the site manager:</strong></h3>
+        <p><strong>Phone:</strong> 0548436851</p>
+        <p><strong>Mail:</strong> michal9741003&#64;gmail.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
