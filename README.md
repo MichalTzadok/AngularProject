@@ -1,27 +1,39 @@
-# AngularProject
+# Angular Course Summary Exercise - Job Search Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+## Server-Side Project
 
-## Development server
+1. In this project, there's a service providing the following actions:
+   - A function that returns a list of jobs.
+   - A function that takes a username and password and returns the corresponding user object. If one of the credentials is incorrect, it returns null.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+2. In the Angular client-side project, the following data models (Models) are defined:
+   - Job: Job field, Job name, Hours per week, Area, Requirements, Work from home indicator.
+   - User: Identifier, Username, Password, Job search field.
 
-## Code scaffolding
+## Components
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. The project includes the following components:
 
-## Build
+### Main Component
+   - Displays the website's header and footer.
+   - Displays details of the logged-in user.
+   - Displays the job field the user is searching for.
+   - Displays the number of CVs already sent through the system.
+   - Displays the site logo.
+   - Displays contact details with the site manager.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Login Component
+   - Allows the user to log in to the system by entering a username and password.
+   - Stores the user details in localStorage.
+   - Shows an error message if the input is invalid.
+   - Redirects the user to the job list page after successful login.
 
-## Running unit tests
+### Job List Component
+   - Displays a filtered list of jobs.
+   - Shows details of each job and an option to view additional information.
+   - Allows the user to send a CV to the company that posted the job.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Debugging and Documentation
+4. All logic is encapsulated in services and treats data cleanly and neatly.
+5. Pipes or custom directives are used for special capabilities.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
