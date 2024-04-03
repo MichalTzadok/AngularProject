@@ -1,0 +1,103 @@
+<!-- 
+<div>
+    <select [(ngModel)]="filterOption" (change)="filterJobs()">
+      <option value="all">הצג את כל המשרות</option>
+      <option value="area">סנן לפי אזור</option>
+      <option value="field">סנן לפי תחום</option>
+    </select>
+  </div>
+  
+  <div *ngIf="filterOption === 'all'" >
+    <div *ngFor="let i=index let j of jobsList">
+        <app-job [jobData]=j ></app-job>    
+        <button (click)="viewJobDetails(j)">פרטי משרה</button>
+    
+    </div>  </div>
+    <div *ngIf="filterOption === 'area'">
+        <select [(ngModel)]="filterValueArea" (change)="filterJobs()">
+            <option *ngFor="let area of uniqueAreas" [value]="area">{{ area }}</option>
+        </select>
+        <div *ngFor="let job of filteredJobs">
+            <app-job [jobData]="job" ></app-job>
+            <button (click)="viewJobDetails(job)">פרטי משרה</button>
+        </div>
+      </div>
+      
+      <div *ngIf="filterOption === 'field'">
+        <select [(ngModel)]="filterValueField" (change)="filterJobs()">
+            <option *ngFor="let field of uniqueFields" [value]="field" >{{  field }}</option>
+        </select>
+        <div *ngFor="let job of filteredJobs">
+            <app-job [jobData]="job" ></app-job>
+            <button (click)="viewJobDetails(job)">פרטי משרה</button>
+        </div>
+      </div> -->
+<!-- jobs-list.component.html -->
+<div class="container mt-5">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-12" style="margin-bottom:100px;">
+        <div class="d-flex justify-content-center mb-3">
+          <select [(ngModel)]="filterOption" (change)="filterJobs()" class="form-select custom-select" style="text-align: center;width: 200px;">
+            <option value="all">Show All Jobs</option>
+            <option value="area">Filter by Area</option>
+            <option value="field">Filter by Field</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="row justify-content-center">
+    <div *ngIf="filterOption === 'all'">
+      <div class="col-md-12" style="margin-bottom: 200px;">
+        <div   class="row">
+          <div *ngFor="let job of jobsList; let i=index" class="col-md-6 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <app-job [jobData]="job"></app-job>
+                <button class="btn btn-dark mt-3 d-block mx-auto" (click)="viewJobDetails(job)"> -job details-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="filterOption === 'area'" class="col-md-6">
+      <select [(ngModel)]="filterValueArea" (change)="filterJobs()" class="form-select mb-3 custom-select">
+        <option *ngFor="let area of uniqueAreas" [value]="area">{{ area }}</option>
+      </select>
+      <div  class="col-md-12" class="row" style="margin-bottom: 200px;">
+        <div *ngFor="let job of filteredJobs; let i=index" class="col-md-6 mb-3" >
+          <div class="card">
+            <div class="card-body">
+              <app-job [jobData]="job"></app-job>
+              <button class="btn btn-dark mt-3 d-block mx-auto" (click)="viewJobDetails(job)">-job details- </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="filterOption === 'field'" class="col-md-6">
+      <select [(ngModel)]="filterValueField" (change)="filterJobs()" class="form-select mb-3 custom-select">
+        <option *ngFor="let field of uniqueFields" [value]="field">{{ field }}</option>
+      </select>
+      <div   class="col-md-12" class="row" style="margin-bottom: 200px;">
+        <div *ngFor="let job of filteredJobs; let i=index" class="col-md-6 mb-3">
+          <div class="card">
+            <div class="card-body">
+              <app-job [jobData]="job"></app-job>
+              <button class="btn btn-dark mt-3 d-block mx-auto" (click)="viewJobDetails(job)">-job details- </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

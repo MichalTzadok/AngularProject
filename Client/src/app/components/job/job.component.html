@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">{{ jobData?.jobName }}</h3>
+        <p *ngIf="jobData && jobData.jobField!=null" class="card-text"><strong>Job Field:</strong> {{ getField()[jobData.jobField] }}</p>
+        <p class="card-text"><strong>Number of Positions:</strong> {{ jobData?.numHours }} hours</p>
+        <p class="card-text"><strong>Job Area:</strong> {{ jobData?.jobArea }}</p>
+        <!-- Add button here if needed -->
+    </div>
+</div>
