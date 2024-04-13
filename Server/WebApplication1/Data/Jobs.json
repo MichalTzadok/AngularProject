@@ -1,0 +1,92 @@
+[
+    {
+        "Id": 0,
+        "JobField": 0,
+        "JobName": "Software Engineer",
+        "NumHours": 40,
+        "JobArea": "New York",
+        "Requirements": "Bachelor's degree in Computer Science",
+        "HomeWorking": true
+    },
+    {
+        "Id": 1,
+        "JobField": 1,
+        "JobName": "Nurse",
+        "NumHours": 36,
+        "JobArea": "Los Angeles",
+        "Requirements": "RN license",
+        "HomeWorking": false
+    },
+    {
+        "Id": 2,
+        "JobField": 2,
+        "JobName": "Financial Analyst",
+        "NumHours": 40,
+        "JobArea": "Chicago",
+        "Requirements": "Bachelor's degree in Finance or Accounting",
+        "HomeWorking": true
+    },
+    {
+        "Id": 3,
+        "JobField": 3,
+        "JobName": "Hotel Manager",
+        "NumHours": 45,
+        "JobArea": "Miami",
+        "Requirements": "Previous management experience",
+        "HomeWorking": false
+    },
+    {
+        "Id": 4,
+        "JobField": 4,
+        "JobName": "Sales Associate",
+        "NumHours": 30,
+        "JobArea": "San Francisco",
+        "Requirements": "Customer service skills",
+        "HomeWorking": false
+    },
+    {
+        "Id": 5,
+        "JobField": 5,
+        "JobName": "HR Specialist",
+        "NumHours": 38,
+        "JobArea": "Dallas",
+        "Requirements": "Bachelor's degree in Human Resources",
+        "HomeWorking": true
+    },
+    {
+        "Id": 6,
+        "JobField": 6,
+        "JobName": "Mechanical Engineer",
+        "NumHours": 42,
+        "JobArea": "Boston",
+        "Requirements": "Bachelor's degree in Mechanical Engineering",
+        "HomeWorking": true
+    },
+    {
+        "Id": 7,
+        "JobField":0,
+        "JobName": "Frontend Developer",
+        "NumHours": 40,
+        "JobArea": "Seattle",
+        "Requirements": "Experience with JavaScript and HTML/CSS",
+        "HomeWorking": true
+    },
+    {
+        "Id": 8,
+        "JobField": 1,
+        "JobName": "Physical Therapist",
+        "NumHours": 35,
+        "JobArea": "Denver",
+        "Requirements": "Doctor of Physical Therapy degree",
+        "HomeWorking": false
+    },
+    {
+        "Id": 9,
+        "JobsFields": 2,
+        "JobName": "Accountant",
+        "NumHours": 40,
+        "JobArea": "Houston",
+        "Requirements": "CPA certification",
+        "HomeWorking": true
+    }
+]

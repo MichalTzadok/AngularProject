@@ -190,3 +190,5 @@ C:\Users\The user\AngularProject\Server\WebApplication1\obj\Debug\net6.0\refint\
 C:\Users\The user\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.pdb
 C:\Users\The user\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.genruntimeconfig.cache
 C:\Users\The user\AngularProject\Server\WebApplication1\obj\Debug\net6.0\ref\WebApplication1.dll
+C:\Users\The user\AngularProject\Server\WebApplication1\bin\Debug\net6.0\Data\Jobs.json
+C:\Users\The user\AngularProject\Server\WebApplication1\bin\Debug\net6.0\Data\Users.json

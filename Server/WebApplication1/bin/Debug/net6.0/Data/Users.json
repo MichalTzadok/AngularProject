@@ -1,0 +1,37 @@
+[
+    {
+        "Id": 1,
+        "Name": "Michal",
+        "Password": "michal123",
+        "SearchJobField": "Software_Development",
+        "JobCount": 0
+    },
+    {
+        "Id": 2,
+        "Name": "Tamar",
+        "Password": "tamar123",
+        "SearchJobField": "Healthcare",
+        "JobCount": 0
+    },
+    {
+        "Id": 3,
+        "Name": "Elchanan",
+        "Password": "elchanan456",
+        "SearchJobField": "Finance",
+        "JobCount": 0
+    },
+    {
+        "Id": 4,
+        "Name": "Avital",
+        "Password": "avital789",
+        "SearchJobField": "Engineering",
+        "JobCount": 0
+    },
+    {
+        "Id": 5,
+        "Name": "Inon",
+        "Password": "inon321",
+        "SearchJobField": "Retail_and_Sales",
+        "JobCount": 0
+    }
+]
