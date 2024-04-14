@@ -8,6 +8,7 @@
 
 # Node
 /node_modules
+/NodeJS-codeExercises
 npm-debug.log
 yarn-error.log
 

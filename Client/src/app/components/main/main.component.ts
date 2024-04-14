@@ -10,80 +10,61 @@ import { UserService } from '../../Services/user.service';
   styleUrl: './main.component.scss'
 })
 export class MainComponent implements OnInit {
-  constructor(private UserService: UserService,private router: Router) { }
   redirectToLoginClicked: boolean = false;
-  userName = localStorage.getItem("userName")
-  currentUser = JSON.parse(String(localStorage.getItem("currentUser")))
-  numOfCVs!: number;
+  userId: number =-1;
+  userName: string | null = null;
+  numOfCVs: number = 0;
   isUser: boolean = false;
   numOfCVsFromServer: any;
   showen: boolean = false;
-  count!: any
+  count: any;
 
+  constructor(private userService: UserService, private router: Router) {}
   ngOnInit(): void {
- this.currentUser = JSON.parse(String(localStorage.getItem("currentUser")))
-    if (!(String(this.currentUser) === "null"))  {
+    this.userName = JSON.parse(localStorage.getItem("userName") || 'null');
+    if (this.userName !== "null" && this.userName !==null) {
       this.isUser = true;
-      
-      let userName = localStorage.getItem("userName");
-      if (userName) {
-        this.count = this.UserService.getNumOfCVsSent(this.currentUser.id).subscribe({
-          next: (data: number) => {
-            this.numOfCVs = data;
-          },
-          error: (error: any) => {
-            console.error('Error fetching job count: ', error);
-          }
-        });
-      }
+      const userIdString=localStorage.getItem("userId") ;
+      if(userIdString!=="null" && userIdString!==null ){
+      this.userId=parseInt(userIdString)
+      this.count = this.userService.getNumOfCVsSent(this.userId).subscribe({
+        next: (data: number) => {
+          const numCVs = localStorage.getItem("CVs");
+          console.log(numCVs );
+          localStorage.setItem('CVs', (data).toString());
+          this.numOfCVs = parseInt(localStorage.getItem("CVs")!);
+        },
+        error: (error: any) => {
+          console.error('Error fetching job count: ', error);
+        }
+      });
      
-    }    
-    
-   
-  }
-    // if (!(String(this.currentUser) === "null")) {
-      // this.isUser = true;
-      // let userName = localStorage.getItem("userName");
-      // if (userName) {
-        // this.UserService.valueChanged.subscribe(() => {
-        //   this.numOfCVsFromServer = this.UserService.getNumOfCVsSent(this.currentUser.id).subscribe({
-        //     next: (numOfCVs: number) => {
-        //       this.numOfCVs = numOfCVs;
-        //     },
-        //     error: (error: any) => {
-        //       console.error('Error Fetching Get numOfCVs: ', error);
-        //     }
-        //   });
-        // }); 
-      //   this.UserService. getNumOfCVsSent(this.currentUser.id).subscribe(data => {
-      //     this.numOfCVs = data;
-      //     console.log( this.numOfCVs);
-          
-      //   });
-      // }
-      // }
-      // this.numOfCVsFromServer = this.UserService.getNumOfCVsSent(this.currentUser.id).subscribe({
-      //   next: (numOfCVs: number) => {
-      //     this.numOfCVs = numOfCVs;
-      //   },
-      //   error: (error: any) => {
-      //     console.error('Error Fetching Get numOfCVs: ', error);
-      //   }
-      // });
-    // }
+    }
+    }
   
-  showJobs(){
-    this.showen=!this.showen;
+
+  }
+
+  showJobs() {
+    this.showen = !this.showen;
     this.router.navigate(['/jobsList']);
   }
-  login(){    
+
+  login() {
     this.router.navigate(['/login']);
   }
-  
-  redirectToLogin(){
-    this.redirectToLoginClicked=!this.redirectToLoginClicked;
+
+  redirectToLogin() {
+
+    this.redirectToLoginClicked = !this.redirectToLoginClicked;
   }
 }
+
+
+
+
+
+
 
 
 

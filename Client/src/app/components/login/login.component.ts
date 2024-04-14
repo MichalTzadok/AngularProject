@@ -10,48 +10,42 @@ import { User } from '../../Models/User';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  
-userName: string = '';
-password: string = '';
-errorMessage: string = '';
+  userName: string = '';
+  password: string = '';
+  errorMessage: string = '';
 
-constructor(private userService: UserService, private router: Router) {}
+  constructor(private userService: UserService, private router: Router) {}
 
-login(): void {
-  // בדיקת תקינות הקלט
-  if (!this.isValidInput()) {
-    this.errorMessage = 'Username and password must be of valid length.';
-    return;
-  }
-  // this.userService.setUserName(this.userName);
-  // this.userService.setUserPassword(this.password);
-
-  // בדיקת אימות המשתמש בשרת
-  this.userService.getUserFromServer(this.userName, this.password).subscribe({
-    next: (user: User) => {
-      localStorage.setItem('currentUser', JSON.stringify(user));
-      // window.location.reload();
-
-      // localStorage.setItem('currentUser', JSON.stringify({ username: this.userName }));
-      this.router.navigate(['/jobsList']);
-
-
-    },
-    error: (error) => { 
-      localStorage.removeItem('userName');
-      localStorage.removeItem('userPassword');
-      localStorage.removeItem('currentUser');
-      localStorage.setItem("currentUser",JSON.stringify(null))
-      console.error('not found');
-      this.errorMessage = 'Username and password are incorrect';
-
+  login(): void {
+    if (!this.isValidInput()) {
+      this.errorMessage = 'Username and password must be of valid length.';
+      return;
     }
-  });
 
-}
-// בדיקת תקינות הקלט
-isValidInput(): boolean {
-  return this.userName.trim().length > 0 && this.password.trim().length >= 8;
+    this.userService.getUserFromServer(this.userName, this.password).subscribe({
+      next: (user: User) => {
+        localStorage.setItem('userId', JSON.stringify(user.id));
+        localStorage.setItem('userName', JSON.stringify(user.name));
+        localStorage.setItem('CVs', JSON.stringify(user.jobCount));
+        console.log(user.jobCount);
+        
+        this.router.navigate(['/jobsList']);
+      },
+      error: (error: any) => {
+        localStorage.removeItem('userId');
+        localStorage.removeItem('userName');
+        localStorage.removeItem('CVs');
+        console.error('Authentication failed:', error);
+        this.errorMessage = 'Username and password are incorrect';
+      }
+    });
+  }
+
+  isValidInput(): boolean {
+    return this.userName.trim().length > 0 && this.password.trim().length >= 8;
+  }
 }
 
-}
+
+
+

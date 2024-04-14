@@ -3,5 +3,5 @@ export class User{
     name:string|null = null
     password:string|null = null
     SearchJobField:string|null = null
-    JobCount:number|null=null
+    jobCount:number|null=null
 }

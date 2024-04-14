@@ -4,13 +4,15 @@ import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { JobsListComponent } from './components/jobs-list/jobs-list.component';
 import { JobDetailsComponent } from './components/job-details/job-details.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [ 
+  {path:'',component:MainComponent},
   {path:'login', component:LoginComponent},
   {path:'jobsList', component:JobsListComponent},
-  { path: 'jobs/:job.id', component: JobDetailsComponent }
+  { path: 'jobs/:job.id', component: JobDetailsComponent },
+  { path: '**', component: NotFoundComponent },
 
-  // {path:'job-details',component:JobDetailsComponent}
 ];
 
 @NgModule({

@@ -10,6 +10,7 @@ import { JobsListComponent } from './components/jobs-list/jobs-list.component';
 import { JobComponent } from './components/job/job.component';
 import { JobDetailsComponent } from './components/job-details/job-details.component';
 import { DropdownDirective } from './directives/dropdown.directive';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DropdownDirective } from './directives/dropdown.directive';
     JobsListComponent,
     JobComponent,
     JobDetailsComponent,
-    DropdownDirective
+    DropdownDirective,
+    NotFoundComponent
     
   ],
   imports: [

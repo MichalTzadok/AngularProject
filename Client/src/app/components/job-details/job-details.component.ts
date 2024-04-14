@@ -1,4 +1,4 @@
-import { Component, OnInit,AfterViewInit} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JobsFields } from '../../Models/JobsFields';
 import { UserService } from '../../Services/user.service';
@@ -11,7 +11,9 @@ import { UserService } from '../../Services/user.service';
 export class JobDetailsComponent implements OnInit{
   job: any; 
 
-  constructor(private router: Router,private router2: ActivatedRoute, private UserService: UserService) { }
+  constructor(private router: Router,private router2: ActivatedRoute, private UserService: UserService) { 
+   
+  }
   
   ngOnInit(): void {
 
@@ -34,19 +36,23 @@ export class JobDetailsComponent implements OnInit{
 
   }
   SendCV() {        
-  const currentUser = JSON.parse(String(localStorage.getItem("currentUser")));
+  const userId = JSON.parse(String(localStorage.getItem("userId")));
   
-  this.UserService.updateUser(currentUser.id).subscribe({
+  this.UserService.updateUser(userId).subscribe({
     next: () => {
       console.log('User updated successfully');
+      window.location.reload();
+
     },
     error: (error) => {
       console.error('Error updating user: ', error);
     }
   });
-window.location.reload()
-  console.log(currentUser.jobCount);
 
+
+}
+goBack() {
+  this.router.navigate(['/jobsList']);
 }
 
 }
