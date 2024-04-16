@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JobsFields } from '../../Models/JobsFields';
 import { UserService } from '../../Services/user.service';
@@ -8,15 +8,10 @@ import { UserService } from '../../Services/user.service';
   templateUrl: './job-details.component.html',
   styleUrls: ['./job-details.component.scss']
 })
-export class JobDetailsComponent implements OnInit{
-  job: any; 
-
-  constructor(private router: Router,private router2: ActivatedRoute, private UserService: UserService) { 
-   
-  }
-  
+export class JobDetailsComponent implements OnInit {
+  job: any;
+  constructor(private router: Router, private router2: ActivatedRoute, private UserService: UserService) { }
   ngOnInit(): void {
-
     this.router2.queryParams.subscribe(params => {
       this.job = {
         id: params['id'],
@@ -31,28 +26,30 @@ export class JobDetailsComponent implements OnInit{
     });
 
   }
-  getField(){
+  getField() {
     return JobsFields
 
   }
-  SendCV() {        
-  const userId = JSON.parse(String(localStorage.getItem("userId")));
-  
-  this.UserService.updateUser(userId).subscribe({
-    next: () => {
-      console.log('User updated successfully');
-      window.location.reload();
+  SendCV() {
+    const userId = JSON.parse(String(localStorage.getItem("userId")));
+    this.UserService.jobsSentCVs?.push(String(this.job.name));
+    console.log(this.UserService.jobsSentCVs);
+    this.UserService.updateUser(userId).subscribe({
+      next: () => {
+        console.log('User updated successfully');
+        this.router.navigate(['/jobsList']);
 
-    },
-    error: (error) => {
-      console.error('Error updating user: ', error);
-    }
-  });
+      },
+      error: (error) => {
+        console.error('Error updating user: ', error);
+      }
+    });
 
 
-}
-goBack() {
-  this.router.navigate(['/jobsList']);
-}
+
+  }
+  // goBack() {
+  //   this.router.navigate(['/jobsList']);
+  // }
 
 }

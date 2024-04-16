@@ -1,5 +1,4 @@
-
-   <!-- Header -->
+<!-- Header -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <div>
@@ -9,17 +8,25 @@
       <div *ngIf="isUser">
         <p class="text-center"><strong>Hi {{ userName }}</strong></p>
         <p class="text-center"><strong>Num of CV sent: {{ numOfCVs }}</strong></p>
-        <div *ngIf="!showen" class="text-center">
+        <div *ngIf="!showenJobs" class="text-center">
           <button class="btn btn-dark" (click)="showJobs()">To the full jobs list👇</button>
         </div>
+
       </div>
-      <div   *ngIf="!isUser && !redirectToLoginClicked" class="text-center">
-        <button   class="btn btn-dark" (click)="login()">Login</button>
+      <div *ngIf="!isUser && !redirectToLoginClicked" class="text-center">
+        <button class="btn btn-dark" (click)="login()">Login</button>
       </div>
     </div>
+    <button class="btn btn-dark " (click)="showMyJobsSent()">MyJobs</button>
+    <div *ngIf="isUser && showenMyJobsSent" class="text-center">
+      <h3>My JobSent List:</h3>
+      <ul>
+        <li *ngFor="let job of userJobsSent">{{ job }}</li>
+      </ul>
+    </div>
     <div>
-      <a routerLink="/login" (click)="redirectToLogin()" class="d-block text-center">
-        <img src="assets/Logo.png" alt="Logo application" width="350" height="230">
+      <a routerLink="/login" (click)="redirectToLogin()" class="d-block text-center Logo">
+        <img src="assets/myLogo.png" alt="Logo application" width="250" height="230">
       </a>
     </div>
   </div>

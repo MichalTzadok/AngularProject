@@ -1,19 +1,17 @@
 <app-main></app-main>
 <div *ngIf="job" class="card text-center card-container">
-  <button class="btn btn-light back-button" (click)="goBack()">
+  <!-- <button class="btn btn-light back-button" (click)="goBack()">
     <i class="bi bi-arrow-left"></i> Back👉🏿
-  </button>
+  </button> -->
 
   <div class="card-body">
-      <h2 class="card-title">{{ job.name }}</h2>
-      <p class="card-text"><strong>Field:</strong> {{ getField()[job.field] }}</p>
-      <p class="card-text"><strong>Hours:</strong> {{ job.hours }}</p>
-      <p class="card-text"><strong>Area:</strong> {{ job.area }}</p>
-      <p class="card-text"><strong>Requirements:</strong> {{ job.requirements }}</p>
-      <p class="card-text"><strong>Home Working:</strong> {{ job.homeWorking }}</p>
-      <button class="btn btn-dark SendCV-button" (click)="SendCV()">Send CV👇</button>
+    <h2 class="card-title">{{ job.name }}</h2>
+    <p class="card-text"><strong>Field:</strong> {{ getField()[job.field] }}</p>
+    <p class="card-text"><strong>Hours:</strong> {{ job.hours }}</p>
+    <p class="card-text"><strong>Area:</strong> {{ job.area }}</p>
+    <p class="card-text"><strong>Requirements:</strong> {{ job.requirements }}</p>
+    <p class="card-text"><strong>Home Working:</strong> {{ job.homeWorking }}</p>
+    <button class="btn btn-dark SendCV-button" (click)="SendCV()">Send CV👇</button>
   </div>
- 
+
 </div>
-
-
