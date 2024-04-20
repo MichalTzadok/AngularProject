@@ -32,12 +32,12 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPut]
-        public void UpdateUser(int userId)
+        public void UpdateUser(int userId,string jobName)
         {
             var user = users.FirstOrDefault(u => u.Id == userId);
             if (user != null)
             {           
-
+            user.JobsSentCV.Add( jobName);
             user.JobCount++;
             var options = new JsonSerializerOptions { WriteIndented = true };
             var jsonString = JsonSerializer.Serialize(users, options);
@@ -45,6 +45,7 @@ namespace WebApplication1.Controllers
 
             }
         }
+        
 
         [HttpGet("{userId}")]
         public IActionResult GetJobCount(int userId)
@@ -55,6 +56,16 @@ namespace WebApplication1.Controllers
                 return NotFound();
             }
             return Ok(user.JobCount);
+        }
+        [HttpGet("JobsSentCVs/{userId}")]
+        public IActionResult GetJobsSentCVs(int userId)
+        {
+            var user = users.FirstOrDefault(u => u.Id == userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return Ok(user.JobsSentCV);
         }
 
        
