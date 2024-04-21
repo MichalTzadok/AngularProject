@@ -4,25 +4,23 @@
     "Name": "Michal",
     "Password": "michal123",
     "SearchJobField": "Software_Development",
-    "JobCount": 10,
-    "JobsSentCV": [
-      "nurse"
-    ]
+    "JobCount": 3,
+    "JobsSentCV": []
   },
   {
     "Id": 2,
     "Name": "Tamar",
     "Password": "tamar123",
     "SearchJobField": "Healthcare",
-    "JobCount": 30,
+    "JobCount": 1,
     "JobsSentCV": [
-      null
+      "Software Engineer"
     ]
   },
   {
     "Id": 3,
     "Name": "Elchanan",
-    "Password": "elchanan456",
+    "Password": "elchanan123",
     "SearchJobField": "Finance",
     "JobCount": 0,
     "JobsSentCV": []
@@ -30,7 +28,7 @@
   {
     "Id": 4,
     "Name": "Avital",
-    "Password": "avital789",
+    "Password": "avital123",
     "SearchJobField": "Engineering",
     "JobCount": 0,
     "JobsSentCV": []
@@ -38,7 +36,7 @@
   {
     "Id": 5,
     "Name": "Inon",
-    "Password": "inon321",
+    "Password": "inon123",
     "SearchJobField": "Retail_and_Sales",
     "JobCount": 0,
     "JobsSentCV": []

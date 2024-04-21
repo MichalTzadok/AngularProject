@@ -37,13 +37,15 @@ namespace WebApplication1.Controllers
             var user = users.FirstOrDefault(u => u.Id == userId);
             if (user != null)
             {           
-            user.JobsSentCV.Add( jobName);
+            user.JobsSentCV.Add(jobName);
             user.JobCount++;
             var options = new JsonSerializerOptions { WriteIndented = true };
             var jsonString = JsonSerializer.Serialize(users, options);
             System.IO.File.WriteAllText(filePath, jsonString);
+            
 
             }
+            
         }
         
 
