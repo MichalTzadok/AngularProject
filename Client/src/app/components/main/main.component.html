@@ -8,16 +8,17 @@
       <div *ngIf="isUser">
         <p class="text-center"><strong>Hi {{ userName }}</strong></p>
         <p class="text-center"><strong>Num of CV sent: {{ numOfCVs }}</strong></p>
-        <a *ngIf="searchJobField" [routerLink]="['/jobsList', searchJobField]">To Jobs List</a>
+        <a class="text-center" *ngIf="searchJobField" [routerLink]="['/jobsList', searchJobField]"
+          class="custom-link"><strong>Transitioning to jobs in your field:</strong></a>
         <div *ngIf="!showenJobs" class="text-center">
-          <button class="btn btn-dark" (click)="showJobs()">To the full jobs list👇</button>
+          <button class="btn btn-dark " (click)="showJobs()">To the full jobs list👇</button>
         </div>
 
       </div>
     </div>
-    <button class="btn btn-dark" (click)="showMyJobsSent()">MyJobs</button>
-    <div *ngIf="isUser && showenMyJobsSent" class="text-center">
-      <h3>My JobSent List:</h3>
+    <button class="btn btn-dark " (click)="showMyJobsSent()">MyJobs</button>
+    <div *ngIf="isUser && showenMyJobsSent">
+      <h3>My JobsSentCVs List:</h3>
       <ul>
         <li *ngFor="let job of userJobsSent">{{ job }}</li>
       </ul>

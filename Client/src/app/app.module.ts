@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { JobsListComponent } from './components/jobs-list/jobs-list.component';
 import { JobComponent } from './components/job/job.component';
 import { JobDetailsComponent } from './components/job-details/job-details.component';
-import { DropdownDirective } from './directives/dropdown.directive';
+import { MouseEffectDirective } from './directives/MouseEffectDirective.directive';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     JobsListComponent,
     JobComponent,
     JobDetailsComponent,
-    DropdownDirective,
+    MouseEffectDirective,
     NotFoundComponent
     
   ],

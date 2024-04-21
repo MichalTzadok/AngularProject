@@ -33,6 +33,9 @@ export class JobsListComponent implements OnInit {
       if (jobField) {
         this.filterOption='field';
         this.filterValueField=jobField;
+        this.uniqueFields = this.jobSvc.uniqueFields
+        console.log(this.uniqueFields);
+
         this.filterJobs();
       }
     });
@@ -48,6 +51,8 @@ export class JobsListComponent implements OnInit {
     else
       if (this.filterOption === 'field') {
         this.filteredJobs = this.jobSvc.filterJobsByField(this.filterValueField);
+        console.log(this.filteredJobs);
+        
       }
   }
   viewJobDetails(job: Job) {

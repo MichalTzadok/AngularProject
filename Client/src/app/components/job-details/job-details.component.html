@@ -1,9 +1,5 @@
 <app-main></app-main>
 <div *ngIf="job" class="card text-center card-container">
-  <!-- <button class="btn btn-light back-button" (click)="goBack()">
-    <i class="bi bi-arrow-left"></i> Back👉🏿
-  </button> -->
-
   <div class="card-body">
     <h2 class="card-title">{{ job.name }}</h2>
     <p class="card-text"><strong>Field:</strong> {{ getField()[job.field] }}</p>
