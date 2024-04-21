@@ -7,41 +7,20 @@ import { User } from "../Models/User";
   providedIn: 'root',
 })
 export class UserService {
-  // private userName?: string | null = null
-  // private userPassword?: string | null = null
   jobsSentCVs: string[] | null = []
 
   constructor(private http: HttpClient) { }
 
-  // getUserName(): string | null {
-  //   if (!this.userName)
-  //     this.userName = localStorage.getItem('userName')
-  //   return this.userName
-  // }
-
-  // setUserName(userName: string) {
-  //   this.userName = userName
-  //   localStorage.setItem('userName', this.userName)
-  // }
-
-  // getUserPassword(): string | null {
-  //   if (!this.userPassword)
-  //     this.userPassword = localStorage.getItem('userPassword')
-  //   return this.userPassword
-  // }
-
-
-  // setUserPassword(userPassword: string) {
-  //   this.userPassword = userPassword
-  //   localStorage.setItem('userPassword', this.userPassword)
-  // }
-  getNumOfCVsSent(userId: number) {
+  getNumOfCVsSent(userId: number) :Observable<number> {
     return this.http.get<number>(`https://localhost:5002/api/Users/${userId}`)
 
   }
-  updateUser(userId: number) {
-    return this.http.put(`https://localhost:5002/api/Users?userId=${userId}`, null)
+  getJobsSentCVs(userId: number): Observable<string[]> {
+    return this.http.get<string[]>(`https://localhost:5002/api/Users/JobsSentCVs/${userId}`);
+  }
 
+  updateUser(userId: number, jobName: string): Observable<void> {
+    return this.http.put<void>(`https://localhost:5002/api/Users?userId=${userId}&jobName=${jobName}`, null);
   }
   getUserFromServer(name: string, password: string): Observable<User> {
     return this.http.get<User>(`https://localhost:5002/api/Users/${name}/${password}`).pipe(
@@ -53,7 +32,7 @@ export class UserService {
         }
         return throwError(() => new Error('Error'));
       })
-    );;
+    );
   }
 
 

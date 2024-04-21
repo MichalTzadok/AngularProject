@@ -26,14 +26,14 @@ export class LoginComponent {
         localStorage.setItem('userId', JSON.stringify(user.id));
         localStorage.setItem('userName', JSON.stringify(user.name));
         localStorage.setItem('CVs', JSON.stringify(user.jobCount));
+        localStorage.setItem('jobsSentCV', JSON.stringify(user.jobsSentCV));
+        localStorage.setItem('searchJobField',JSON.stringify(user.searchJobField?.trim()) || '""'.replace(/"/g, ''));
         console.log(user.jobCount);
 
         this.router.navigate(['/jobsList']);
       },
       error: (error: any) => {
-        localStorage.removeItem('userId');
-        localStorage.removeItem('userName');
-        localStorage.removeItem('CVs');
+       localStorage.clear();
         console.error('Authentication failed:', error);
         this.errorMessage = 'Username and password are incorrect';
       }

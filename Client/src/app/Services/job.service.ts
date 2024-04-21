@@ -33,7 +33,7 @@ export class JobService {
   }
   filterJobsByField(field: string): Job[] {
     const value = Object.values(JobsFields).indexOf(field);
-    return this.jobs.filter(job => {
+    return this.jobs.filter(job => { 
       return job.jobField === value;
     });
   }

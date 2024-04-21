@@ -10,6 +10,7 @@ const routes: Routes = [
   {path:'',component:MainComponent},
   {path:'login', component:LoginComponent},
   {path:'jobsList', component:JobsListComponent},
+  { path: 'jobsList/:field', component: JobsListComponent },  
   { path: 'jobs/:job.id', component: JobDetailsComponent },
   { path: '**', component: NotFoundComponent },
 

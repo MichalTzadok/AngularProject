@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {  Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { UserService } from '../../Services/user.service';
 
 @Component({
@@ -16,6 +16,7 @@ export class MainComponent implements OnInit {
   showenJobs: boolean = false;
   showenMyJobsSent: boolean = false;
   userJobsSent: any;
+  searchJobField: string | null = null;
   constructor(private userService: UserService, private router: Router) { }
 
 
@@ -30,9 +31,22 @@ export class MainComponent implements OnInit {
         this.userService.getNumOfCVsSent(this.userId).subscribe({
           next: (data: number) => {
             const numCVs = localStorage.getItem("CVs");
-            console.log(numCVs);
             localStorage.setItem('CVs', (data).toString());
             this.numOfCVs = parseInt(localStorage.getItem("CVs")!);
+            console.log(numCVs);
+
+          },
+          error: (error: any) => {
+            console.error('Error fetching job count: ', error);
+          }
+        });
+        this.userService.getJobsSentCVs(this.userId).subscribe({
+          next: (data: string[]) => {
+            const userJobsSent = localStorage.getItem("jobsSentCV");
+            console.log(userJobsSent);
+            localStorage.setItem('jobsSentCV', JSON.stringify(data));
+            this.userJobsSent = JSON.parse(localStorage.getItem("jobsSentCV") || "[]");
+            console.log(this.userJobsSent);
 
           },
           error: (error: any) => {
@@ -40,6 +54,7 @@ export class MainComponent implements OnInit {
           }
         });
 
+        this.searchJobField = JSON.parse(localStorage.getItem('searchJobField') || "");
       }
     }
 
@@ -62,14 +77,4 @@ export class MainComponent implements OnInit {
     this.redirectToLoginClicked = !this.redirectToLoginClicked;
   }
 }
-
-
-
-
-
-
-
-
-
-
 

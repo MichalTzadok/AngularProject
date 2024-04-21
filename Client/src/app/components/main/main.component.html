@@ -8,16 +8,14 @@
       <div *ngIf="isUser">
         <p class="text-center"><strong>Hi {{ userName }}</strong></p>
         <p class="text-center"><strong>Num of CV sent: {{ numOfCVs }}</strong></p>
+        <a *ngIf="searchJobField" [routerLink]="['/jobsList', searchJobField]">To Jobs List</a>
         <div *ngIf="!showenJobs" class="text-center">
           <button class="btn btn-dark" (click)="showJobs()">To the full jobs list👇</button>
         </div>
 
       </div>
-      <div *ngIf="!isUser && !redirectToLoginClicked" class="text-center">
-        <button class="btn btn-dark" (click)="login()">Login</button>
-      </div>
     </div>
-    <button class="btn btn-dark " (click)="showMyJobsSent()">MyJobs</button>
+    <button class="btn btn-dark" (click)="showMyJobsSent()">MyJobs</button>
     <div *ngIf="isUser && showenMyJobsSent" class="text-center">
       <h3>My JobSent List:</h3>
       <ul>
@@ -37,7 +35,7 @@
   <div class="container">
     <div class="row">
       <div class="col text-center">
-        <h3><strong> details for the site manager:</strong></h3>
+        <h3><strong>Details for the site manager:</strong></h3>
         <p><strong>Phone:</strong> 0548436851</p>
         <p><strong>Mail:</strong> michal9741003&#64;gmail.com</p>
       </div>

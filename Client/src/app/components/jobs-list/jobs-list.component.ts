@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JobService } from '../../Services/job.service';
 import { Job } from '../../Models/Job';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../../Services/user.service';
 
 
@@ -18,7 +18,7 @@ export class JobsListComponent implements OnInit {
   filterOption: string = 'all';
   filterValueArea: string = 'New York';
   filterValueField: string = 'Software_Development';
-  constructor(private jobSvc: JobService, private router: Router, private UserService: UserService) {
+  constructor(private jobSvc: JobService, private router: Router, private UserService: UserService, private activatedRoute: ActivatedRoute) {
     if (localStorage.getItem("userName")) {
       this.jobsList = this.jobSvc.JobsList
     }
@@ -28,6 +28,14 @@ export class JobsListComponent implements OnInit {
     }
   }
   ngOnInit(): void {
+    this.activatedRoute.paramMap.subscribe(params => {
+      const jobField = params.get('field');
+      if (jobField) {
+        this.filterOption='field';
+        this.filterValueField=jobField;
+        this.filterJobs();
+      }
+    });
 
     this.uniqueFields = this.jobSvc.uniqueFields
     this.uniqueAreas = this.jobSvc.uniqueAreas

@@ -32,9 +32,9 @@ export class JobDetailsComponent implements OnInit {
   }
   SendCV() {
     const userId = JSON.parse(String(localStorage.getItem("userId")));
-    this.UserService.jobsSentCVs?.push(String(this.job.name));
+    // this.UserService.jobsSentCVs?.push(String(this.job.name));
     console.log(this.UserService.jobsSentCVs);
-    this.UserService.updateUser(userId).subscribe({
+    this.UserService.updateUser(userId,this.job.name).subscribe({
       next: () => {
         console.log('User updated successfully');
         this.router.navigate(['/jobsList']);
