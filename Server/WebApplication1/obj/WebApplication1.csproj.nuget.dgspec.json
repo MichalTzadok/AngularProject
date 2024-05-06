@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\The user\\AngularProject\\Server\\WebApplication1\\WebApplication1.csproj": {}
+    "F:\\מתקדםPython\\advanced-Python\\AngularProject\\Server\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\The user\\AngularProject\\Server\\WebApplication1\\WebApplication1.csproj": {
+    "F:\\מתקדםPython\\advanced-Python\\AngularProject\\Server\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\The user\\AngularProject\\Server\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "F:\\מתקדםPython\\advanced-Python\\AngularProject\\Server\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "C:\\Users\\The user\\AngularProject\\Server\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "F:\\מתקדםPython\\advanced-Python\\AngularProject\\Server\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\The user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\The user\\AngularProject\\Server\\WebApplication1\\obj\\",
+        "outputPath": "F:\\מתקדםPython\\advanced-Python\\AngularProject\\Server\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

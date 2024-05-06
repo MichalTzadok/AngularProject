@@ -15,7 +15,6 @@ export class MainComponent implements OnInit {
   isUser: boolean = false;
   showenJobs: boolean = false;
   showenMyJobsSent: boolean = false;
-  userJobsSent: any;
   searchJobField: string | null = null;
   constructor(private userService: UserService, private router: Router) { }
 
@@ -24,7 +23,6 @@ export class MainComponent implements OnInit {
     this.userName = JSON.parse(localStorage.getItem("userName") || 'null');
     if (this.userName !== "null" && this.userName !== null) {
       this.isUser = true;
-      this.userJobsSent = this.userService.jobsSentCVs;
       const userIdString = localStorage.getItem("userId");
       if (userIdString !== "null" && userIdString !== null) {
         this.userId = parseInt(userIdString)
@@ -40,19 +38,7 @@ export class MainComponent implements OnInit {
             console.error('Error fetching job count: ', error);
           }
         });
-        this.userService.getJobsSentCVs(this.userId).subscribe({
-          next: (data: string[]) => {
-            const userJobsSent = localStorage.getItem("jobsSentCV");
-            console.log(userJobsSent);
-            localStorage.setItem('jobsSentCV', JSON.stringify(data));
-            this.userJobsSent = JSON.parse(localStorage.getItem("jobsSentCV") || "[]");
-            console.log(this.userJobsSent);
-
-          },
-          error: (error: any) => {
-            console.error('Error fetching job count: ', error);
-          }
-        });
+        
 
         this.searchJobField = JSON.parse(localStorage.getItem('searchJobField') || "");
       }
@@ -66,7 +52,8 @@ export class MainComponent implements OnInit {
     this.router.navigate(['/jobsList']);
   }
   showMyJobsSent() {
-    this.showenMyJobsSent = !this.showenMyJobsSent;
+    // this.showenMyJobsSent = !this.showenMyJobsSent;
+    this.router.navigate(['jobs-cent-cv']);
 
   }
   login() {

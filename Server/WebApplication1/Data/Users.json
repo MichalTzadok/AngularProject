@@ -4,8 +4,11 @@
     "Name": "Michal",
     "Password": "michal123",
     "SearchJobField": "Software_Development",
-    "JobCount": 3,
-    "JobsSentCV": []
+    "JobCount": 2,
+    "JobsSentCV": [
+      "Software Engineer",
+      "Financial Analyst"
+    ]
   },
   {
     "Id": 2,

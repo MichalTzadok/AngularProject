@@ -192,3 +192,32 @@ C:\Users\The user\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebAppl
 C:\Users\The user\AngularProject\Server\WebApplication1\obj\Debug\net6.0\ref\WebApplication1.dll
 C:\Users\The user\AngularProject\Server\WebApplication1\bin\Debug\net6.0\Data\Jobs.json
 C:\Users\The user\AngularProject\Server\WebApplication1\bin\Debug\net6.0\Data\Users.json
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\appsettings.Development.json
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\appsettings.json
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\Data\Jobs.json
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\Data\Users.json
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\WebApplication1.exe
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\WebApplication1.deps.json
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\WebApplication1.runtimeconfig.json
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\WebApplication1.dll
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\WebApplication1.pdb
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\Microsoft.OpenApi.dll
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.csproj.AssemblyReference.cache
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.AssemblyInfoInputs.cache
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.AssemblyInfo.cs
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.csproj.CoreCompileInputs.cache
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\staticwebassets.build.json
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\staticwebassets.development.json
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\scopedcss\bundle\WebApplication1.styles.css
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.csproj.CopyComplete
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.dll
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\refint\WebApplication1.dll
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.pdb
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\WebApplication1.genruntimeconfig.cache
+F:\מתקדםPython\advanced-Python\AngularProject\Server\WebApplication1\obj\Debug\net6.0\ref\WebApplication1.dll

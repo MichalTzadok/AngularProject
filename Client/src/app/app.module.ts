@@ -11,6 +11,7 @@ import { JobComponent } from './components/job/job.component';
 import { JobDetailsComponent } from './components/job-details/job-details.component';
 import { MouseEffectDirective } from './directives/MouseEffectDirective.directive';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { JobsSentCvComponent } from './components/jobs-sent-cv/jobs-sent-cv.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     JobComponent,
     JobDetailsComponent,
     MouseEffectDirective,
-    NotFoundComponent
+    NotFoundComponent,
+    JobsSentCvComponent
     
   ],
   imports: [

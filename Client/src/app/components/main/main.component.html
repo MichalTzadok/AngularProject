@@ -6,22 +6,16 @@
       <p class="text-center">Find Your Perfect Job Easily!</p>
       <p class="text-center">Here you can enjoy a wide variety of jobs for all ages and in all fields.</p>
       <div *ngIf="isUser">
-        <p class="text-center"><strong>Hi {{ userName }}</strong></p>
-        <p class="text-center"><strong>Num of CV sent: {{ numOfCVs }}</strong></p>
+        <p class="text-center"><strong>👤Hi {{ userName }}</strong></p>
+        <p class="text-center"><strong>👌Num of CV sent: {{ numOfCVs }}</strong></p>
         <a class="text-center" *ngIf="searchJobField" [routerLink]="['/jobsList', searchJobField]"
           class="custom-link"><strong>Transitioning to jobs in your field:</strong></a>
         <div *ngIf="!showenJobs" class="text-center">
           <button class="btn btn-dark " (click)="showJobs()">To the full jobs list👇</button>
         </div>
+        <button class="btn btn-dark text-center" (click)="showMyJobsSent()">MyJobsCentCV</button>
 
       </div>
-    </div>
-    <button class="btn btn-dark " (click)="showMyJobsSent()">MyJobs</button>
-    <div *ngIf="isUser && showenMyJobsSent">
-      <h3>My JobsSentCVs List:</h3>
-      <ul>
-        <li *ngFor="let job of userJobsSent">{{ job }}</li>
-      </ul>
     </div>
     <div>
       <a routerLink="/login" (click)="redirectToLogin()" class="d-block text-center Logo">

@@ -12,8 +12,10 @@
     "Name": "Tamar",
     "Password": "tamar123",
     "SearchJobField": "Healthcare",
-    "JobCount": 32,
-    "JobsSentCV": []
+    "JobCount": 1,
+    "JobsSentCV": [
+      "Software Engineer"
+    ]
   },
   {
     "Id": 3,
