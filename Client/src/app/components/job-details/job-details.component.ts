@@ -9,8 +9,11 @@ import { UserService } from '../../Services/user.service';
   styleUrls: ['./job-details.component.scss']
 })
 export class JobDetailsComponent implements OnInit {
-  job: any;
+  job: any;// Stores the details of the current job
+
   constructor(private router: Router, private router2: ActivatedRoute, private UserService: UserService) { }
+  // Lifecycle hook that initializes the component.
+  //  Fetches job details from the route parameters and stores them in `job`.
   ngOnInit(): void {
     this.router2.queryParams.subscribe(params => {
       this.job = {
@@ -26,14 +29,18 @@ export class JobDetailsComponent implements OnInit {
     });
 
   }
+  // Function to return job fields/categories
   getField() {
     return JobsFields
 
   }
+  // Sends a CV (Curriculum Vitae) for the current job.
+  // Updates the user's record to reflect the job application.
+  // Upon success, navigates back to the job list.
   SendCV() {
     const userId = JSON.parse(String(localStorage.getItem("userId")));
     console.log(this.UserService.jobsSentCVs);
-    this.UserService.updateUser(userId,this.job.name).subscribe({
+    this.UserService.updateUser(userId, this.job.name).subscribe({
       next: () => {
         console.log('User updated successfully');
         this.router.navigate(['/jobsList']);
@@ -47,5 +54,5 @@ export class JobDetailsComponent implements OnInit {
 
 
   }
- 
+
 }
