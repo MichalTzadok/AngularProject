@@ -18,6 +18,7 @@ export class JobsListComponent implements OnInit {
   filterOption: string = 'all';
   filterValueArea: string = 'New York';
   filterValueField: string = 'Software_Development';
+  filterByUserField:boolean=false;
   constructor(private jobSvc: JobService, private router: Router, private UserService: UserService, private activatedRoute: ActivatedRoute) {
     if (localStorage.getItem("userName")) {
       this.jobsList = this.jobSvc.JobsList
@@ -34,9 +35,8 @@ export class JobsListComponent implements OnInit {
         this.filterOption='field';
         this.filterValueField=jobField;
         this.uniqueFields = this.jobSvc.uniqueFields
-        console.log(this.uniqueFields);
-
-        this.filterJobs();
+        this.filterByUserField=!this.filterByUserField
+        this.filteredJobs = this.jobSvc.filterJobsByField(this.filterValueField);
       }
     });
 
@@ -47,13 +47,15 @@ export class JobsListComponent implements OnInit {
   filterJobs() {
     if (this.filterOption === 'area') {
       this.filteredJobs = this.jobSvc.filterJobsByArea(this.filterValueArea);
+
     }
     else
       if (this.filterOption === 'field') {
         this.filteredJobs = this.jobSvc.filterJobsByField(this.filterValueField);
-        console.log(this.filteredJobs);
-        
       }
+
+    this.router.navigate(['/jobsList'])
+  
   }
   viewJobDetails(job: Job) {
     this.router.navigate(['/jobs', job.id], {
