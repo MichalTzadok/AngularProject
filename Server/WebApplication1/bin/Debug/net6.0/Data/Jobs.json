@@ -64,7 +64,7 @@
     },
     {
         "Id": 7,
-        "JobField":0,
+        "JobField": 0,
         "JobName": "Frontend Developer",
         "NumHours": 40,
         "JobArea": "Seattle",
@@ -82,11 +82,191 @@
     },
     {
         "Id": 9,
-        "JobsFields": 2,
+        "JobField": 2,
         "JobName": "Accountant",
         "NumHours": 40,
         "JobArea": "Houston",
         "Requirements": "CPA certification",
         "HomeWorking": true
+    },
+    {
+        "Id": 10,
+        "JobField": 3,
+        "JobName": "Event Planner",
+        "NumHours": 45,
+        "JobArea": "Las Vegas",
+        "Requirements": "Experience in event planning",
+        "HomeWorking": false
+    },
+    {
+        "Id": 11,
+        "JobField": 4,
+        "JobName": "Marketing Specialist",
+        "NumHours": 38,
+        "JobArea": "San Diego",
+        "Requirements": "Bachelor's degree in Marketing",
+        "HomeWorking": true
+    },
+    {
+        "Id": 12,
+        "JobField": 5,
+        "JobName": "Customer Support Representative",
+        "NumHours": 32,
+        "JobArea": "Phoenix",
+        "Requirements": "Good communication skills",
+        "HomeWorking": false
+    },
+    {
+        "Id": 13,
+        "JobField": 6,
+        "JobName": "Civil Engineer",
+        "NumHours": 45,
+        "JobArea": "Washington, D.C.",
+        "Requirements": "Bachelor's degree in Civil Engineering",
+        "HomeWorking": true
+    },
+    {
+        "Id": 14,
+        "JobField": 0,
+        "JobName": "Backend Developer",
+        "NumHours": 40,
+        "JobArea": "Austin",
+        "Requirements": "Experience with Node.js and databases",
+        "HomeWorking": true
+    },
+    {
+        "Id": 15,
+        "JobField": 1,
+        "JobName": "Radiologist",
+        "NumHours": 38,
+        "JobArea": "Philadelphia",
+        "Requirements": "MD with specialization in radiology",
+        "HomeWorking": false
+    },
+    {
+        "Id": 16,
+        "JobField": 2,
+        "JobName": "Financial Advisor",
+        "NumHours": 40,
+        "JobArea": "Atlanta",
+        "Requirements": "Bachelor's degree in Finance",
+        "HomeWorking": true
+    },
+    {
+        "Id": 17,
+        "JobField": 3,
+        "JobName": "Restaurant Manager",
+        "NumHours": 45,
+        "JobArea": "Los Angeles",
+        "Requirements": "Previous experience in restaurant management",
+        "HomeWorking": false
+    },
+    {
+        "Id": 18,
+        "JobField": 4,
+        "JobName": "Content Writer",
+        "NumHours": 30,
+        "JobArea": "Seattle",
+        "Requirements": "Excellent writing skills",
+        "HomeWorking": true
+    },
+    {
+        "Id": 19,
+        "JobField": 5,
+        "JobName": "Human Resources Manager",
+        "NumHours": 40,
+        "JobArea": "Chicago",
+        "Requirements": "Bachelor's degree in Human Resources",
+        "HomeWorking": true
+    },
+    {
+        "Id": 20,
+        "JobField": 6,
+        "JobName": "Electrical Engineer",
+        "NumHours": 45,
+        "JobArea": "Houston",
+        "Requirements": "Bachelor's degree in Electrical Engineering",
+        "HomeWorking": true
+    },
+    {
+        "Id": 21,
+        "JobField": 0,
+        "JobName": "Full-Stack Developer",
+        "NumHours": 40,
+        "JobArea": "San Francisco",
+        "Requirements": "Experience with full-stack technologies",
+        "HomeWorking": true
+    },
+    {
+        "Id": 22,
+        "JobField": 1,
+        "JobName": "Dentist",
+        "NumHours": 35,
+        "JobArea": "Boston",
+        "Requirements": "DDS or DMD degree",
+        "HomeWorking": false
+    },
+    {
+        "Id": 23,
+        "JobField": 2,
+        "JobName": "Investment Banker",
+        "NumHours": 50,
+        "JobArea": "New York",
+        "Requirements": "Bachelor's degree in Finance or Business Administration",
+        "HomeWorking": true
+    },
+    {
+        "Id": 24,
+        "JobField": 3,
+        "JobName": "Barista",
+        "NumHours": 25,
+        "JobArea": "San Diego",
+        "Requirements": "Experience in coffee preparation",
+        "HomeWorking": false
+    },
+    {
+        "Id": 25,
+        "JobField": 4,
+        "JobName": "Public Relations Specialist",
+        "NumHours": 38,
+        "JobArea": "Los Angeles",
+        "Requirements": "Bachelor's degree in Public Relations",
+        "HomeWorking": true
+    },
+    {
+        "Id": 26,
+        "JobField": 5,
+        "JobName": "Recruiter",
+        "NumHours": 40,
+        "JobArea": "Chicago",
+        "Requirements": "Experience in recruitment",
+        "HomeWorking": true
+    },
+    {
+        "Id": 27,
+        "JobField": 6,
+        "JobName": "Architect",
+        "NumHours": 45,
+        "JobArea": "Washington, D.C.",
+        "Requirements": "Bachelor's degree in Architecture",
+        "HomeWorking": true
+    },
+    {
+        "Id": 28,
+        "JobField": 0,
+        "JobName": "DevOps Engineer",
+        "NumHours": 40,
+        "JobArea": "Austin",
+        "Requirements": "Experience with cloud technologies",
+        "HomeWorking": true
+    },
+    {
+        "Id": 29,
+        "JobField": 1,
+        "JobName": "Pharmacist",
+        "NumHours": 38,
+        "JobArea": "Philadelphia",
+        "Requirements": "Pharmacy degree",
+        "HomeWorking": false
     }
 ]
