@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,60 +7,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Title for the document -->
   <title>JobSearch</title>
-  <!-- Bootstrap library -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
+  <!-- Navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+      <div class="navbar-brand ms-auto">
+        <a [routerLink]="'/login'" (click)="redirectToLogin()">
+          <img src="assets/myLogo.png" alt="Logo application" width="250" height="230">
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
         aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <div class="mx-auto">
-          <h1 class="text-center">Welcome to Our Job Search Website</h1>
-          <p class="text-center">Find Your Perfect Job Easily!</p>
-          <p class="text-center">Here you can enjoy a wide variety of jobs for all ages and in all fields.</p>
-          <div *ngIf="isUser">
-            <p class="text-center"><strong>👤 Hi {{ userName }}</strong></p>
-            <p class="text-center"><strong>👌 Num of CV sent: {{ numOfCVs }}</strong></p>
-            <a class="text-center" *ngIf="searchJobField" [routerLink]="['/jobsList', searchJobField]"
-              class="custom-link"><strong>Transitioning to jobs in your field:</strong></a>
-            <div *ngIf="!showenJobs" class="text-center">
-              <button class="btn btn-dark" (click)="showJobs()">To the full jobs list👇</button>
-            </div>
-            <button class="btn btn-dark text-center" (click)="showMyJobsSent()">MyJobsCentCV</button>
-          </div>
-        </div>
 
-        <div class="ml-auto">
-          <a routerLink="/login" (click)="redirectToLogin()" class="Logo">
-            <img src="assets/myLogo.png" alt="Logo application" width="250" height="230">
-          </a>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarContent">
+
+        <ul class="navbar-nav mx-auto text-center">
+          <div class="text-center">
+            <h1>Welcome to Our Job Search Website</h1>
+            <p>Find Your Perfect Job Easily!</p>
+            <p>Enjoy a wide variety of jobs for all ages and fields.</p>
+          </div>
+          <!-- אם המשתמש מחובר -->
+          <li class="nav-item" *ngIf="isUser">
+            <strong>👤 Hi {{ userName }}</strong><br>
+            <strong>👌 Num of CV sent: {{ numOfCVs }}</strong>
+            <a class="nav-link" *ngIf="searchJobField" [routerLink]="['/jobsList', searchJobField]">
+              Transitioning to jobs in your field
+            </a>
+            <button class="btn btn-dark" (click)="showJobs()">
+              To the full jobs list 👇
+            </button>
+            <br><br>
+            <button class="btn btn-dark" (click)="showMyJobsSent()">
+              My Jobs Sent CV
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
+
+  <!-- Footer -->
   <footer class="footer navbar-light bg-light fixed-bottom">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 text-center">
-          <h3><strong>Details for the site manager:</strong></h3>
-          <p><strong>Phone:</strong> 0548436851</p>
-          <p><strong>Mail:</strong> michal9741003$#64gmail.com</p>
-        </div>
-      </div>
+    <div class="container text-center">
+      <h3><strong>Details for the site manager:</strong></h3>
+      <p><strong>Phone:</strong> 0548436851</p>
+      <p><strong>Mail:</strong> michal9741003&#64;gmail.com</p>
     </div>
   </footer>
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- Popper.js library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <!-- Bootstrap JavaScript library -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  <!-- Bootstrap scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
